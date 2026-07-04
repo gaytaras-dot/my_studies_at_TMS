@@ -28,8 +28,8 @@ def converting_to_decimal(bynary_str):
         num_list.append(int(x))
     num_list.reverse()
     decimal = 0
-    for x in num_list:
-        decimal += x * (2 ** num_list.index(x))
+    for index, x in enumerate(num_list):  # используем enumerate для получения индекса
+        decimal += x * (2 ** index)
     return decimal
 
 def main():
